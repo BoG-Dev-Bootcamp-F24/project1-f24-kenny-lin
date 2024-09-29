@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom';
+import Pokemon from './Pokemon'; 
 
-function App() {
-  const [count, setCount] = useState(0)
+const PokemonPage = () => {
+  const { id } = useParams(); 
+  const navigate = useNavigate();
+  const pokemonId = parseInt(id, 10);  
+
+  const handlePrevious = () => {
+    if (pokemonId > 1) {
+      navigate(`/Pokemon/${pokemonId - 1}`);  
+    }
+  };
+
+  const handleNext = () => {
+    if (pokemonId < 1025) {
+      navigate(`/Pokemon/${pokemonId + 1}`);  
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <h1>Bits of Good Mid-Semester Project</h1>
+      
+      <button onClick={handlePrevious}>PREV</button>
+      <button onClick={handleNext}>NEXT</button>
 
-export default App
+      <Pokemon id={pokemonId} />
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <Routes>
+
+      <Route path="/" element={<Navigate to="/Pokemon/1" />} />
+
+      <Route path="/Pokemon/:id" element={<PokemonPage />} />
+      
+      <Route path="*" element={<p>404 Not Found</p>} />
+    </Routes>
+  );
+};
+
+export default App;
