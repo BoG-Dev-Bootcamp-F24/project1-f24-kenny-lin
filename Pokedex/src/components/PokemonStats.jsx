@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PokemonDetails.module.css';
+import styles from './PokemonStats.module.css';
 
 const PokemonDetails = ({ pokemon, view }) => {
 

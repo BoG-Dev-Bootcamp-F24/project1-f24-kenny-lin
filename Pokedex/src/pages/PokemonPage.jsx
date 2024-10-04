@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchPokemonData } from '../utils/api';
-import PokemonDetails from '../components/PokemonDetails';
+import PokemonStats from '../components/PokemonStats';
 import Type from '../components/Type';
 import styles from './PokemonPage.module.css';
 import leftArrow from '../assets/left-arrow.png'; 
@@ -77,7 +77,7 @@ const PokemonPage = () => {
             <h3>{view === 'info' ? 'Info' : 'Moves'}</h3>
           </div>
           <div className={styles.detailsContainer}>
-            <PokemonDetails pokemon={pokemonData} view={view} />
+            <PokemonStats pokemon={pokemonData} view={view} />
           </div>
           <div className={styles.viewButtons}>
             <button 
