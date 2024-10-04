@@ -1,0 +1,17 @@
+.typeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25.5%;  /* Fixed width */
+  height: 100%;  /* Fixed height */
+  border-radius: 10px;
+  font-size: 1.55em;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: black;
+}
+
+.typeBox span {
+  display: block;
+  text-align: center;
+}
