@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25.5%;  /* Fixed width */
-  height: 100%;  /* Fixed height */
+  width: 25.5%;
+  height: 100%; 
   border-radius: 10px;
   font-size: 1.55em;
   font-weight: 400;

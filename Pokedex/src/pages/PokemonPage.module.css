@@ -124,7 +124,7 @@
 .viewButtons {
   display: flex;
   justify-content: center;
-  margin-top: 6vh;
+  margin-top: 4vh;
   height: 8%;
   gap: 1.5vw;
 }

@@ -98,7 +98,7 @@ const PokemonPage = () => {
     </div>
   );
 
-  if (!pokemonData) return <div className={styles.loading}>Loading...</div>;
+  if (!pokemonData) return <div className={styles.loading}>Error, invalid id</div>;
 
   return (
     <div className={styles.outerContainer}>

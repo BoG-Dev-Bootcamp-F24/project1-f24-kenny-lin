@@ -1,3 +1,6 @@
+# Walkthrough Video:
+[\[https://youtu.be/ONaFPVipN0A\]](https://youtu.be/ONaFPVipN0A)
+
 # Project 1 — Mini Pokédex
 
 ## Description

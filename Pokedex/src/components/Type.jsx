@@ -23,7 +23,7 @@ const typeColors = {
 };
 
 const Type = ({ type }) => {
-  const backgroundColor = typeColors[type.toLowerCase()] || '#A8A77A'; // Default to normal type color
+  const backgroundColor = typeColors[type.toLowerCase()] || '#A8A77A'; 
 
   return (
     <div className={styles.typeBox} style={{ backgroundColor }}>

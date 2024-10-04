@@ -14,9 +14,9 @@ export const fetchPokemonData = async (id) => {
         'special-defense': data.stats.find(stat => stat.stat.name === 'special-defense').base_stat,
         speed: data.stats.find(stat => stat.stat.name === 'speed').base_stat,
       },
-      height: data.height / 10, // Convert to meters
-      weight: data.weight / 10, // Convert to kg
-      moves: data.moves.slice(0, 10).map(move => move.move.name), //10 moves
+      height: data.height / 10, 
+      weight: data.weight / 10, 
+      moves: data.moves.map(move => move.move.name), 
     };
   } catch (error) {
     console.error("Error fetching Pokemon data:", error);

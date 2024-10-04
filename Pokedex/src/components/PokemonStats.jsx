@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PokemonStats.module.css';
 
-const PokemonDetails = ({ pokemon, view }) => {
+const PokemonStats = ({ pokemon, view }) => {
 
   const renderInfo = () => (
     <div className={styles.infoContainer}>
@@ -30,4 +30,4 @@ const PokemonDetails = ({ pokemon, view }) => {
   );
 };
 
-export default PokemonDetails;
+export default PokemonStats;
